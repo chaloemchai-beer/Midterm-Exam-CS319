@@ -8,15 +8,6 @@
 - **TypeScript**: ภาษาที่มีการตรวจสอบประเภทข้อมูล ซึ่งสร้างขึ้นจาก JavaScript
 - **Nodemon**: ยูทิลิตี้ที่ช่วยตรวจสอบการเปลี่ยนแปลงของซอร์สโค้ดและรีสตาร์ทเซิร์ฟเวอร์อัตโนมัติ
 
-## โครงสร้างโฟลเดอร์
-
-โปรเจกต์นี้มีการจัดโครงสร้างโฟลเดอร์ดังนี้:
-
-|-- dist/ # ไฟล์ JavaScript ที่ถูกคอมไพล์แล้ว (ผลลัพธ์หลังจากคอมไพล์ TypeScript) |-- src/ # ซอร์สไฟล์ TypeScript |-- models/ # โมเดลของแอปพลิเคชัน |-- DiscountedProduct.ts |-- Inventory.ts |-- Product.ts |-- services/ # การเชื่อมต่อกับ API service |-- api.ts |-- types/ # ไฟล์กำหนดประเภทข้อมูล (Types) |-- types.ts |-- utils/ # ฟังก์ชันยูทิลิตี้ |-- helpers.ts |-- index.ts # จุดเริ่มต้นของแอปพลิเคชัน |-- package.json # ไฟล์ระบุ dependencies และสคริปต์ต่างๆ |-- tsconfig.json # ไฟล์กำหนดการคอนฟิกของ TypeScript
-
-markdown
-Copy code
-
 ### **โฟลเดอร์และไฟล์สำคัญ:**
 
 - **`dist/`**: ไฟล์ JavaScript ที่ถูกคอมไพล์จาก TypeScript ซึ่งจะถูกใช้โดย Node.js เพื่อรันแอปพลิเคชัน
@@ -48,13 +39,10 @@ Copy code
 1. **ติดตั้ง dependencies**:
    ```bash
    npm install
-รันแอปพลิเคชัน ในโหมดพัฒนา (โดยใช้ nodemon):
-
-bash
-Copy code
-npm run dev
-คอมไพล์โปรเจกต์ เพื่อเตรียมใช้งานจริง:
-
-bash
-Copy code
-npm run build
+2. **รัน npm run dev เพื่อให้ tsc อัพเดตทุกครั้งที่เปลี่ยนโค้ด**:
+   ```bash
+   npm run dev
+3. **รันแอปพลิเคชัน เพื่อเช็ดผลลัพธ์**:
+   ```bash
+   npm run start
+  
